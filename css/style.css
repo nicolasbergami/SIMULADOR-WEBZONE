@@ -1,0 +1,28 @@
+body{
+    background: url("https://images6.alphacoders.com/774/774373.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.85;
+}
+
+h1{
+    text-align: center;
+    font-family: 'arial';
+}
+h2{
+    color: white;
+}
+label{
+    font-family: 'arial';
+    font-weight: bold;
+    color:white;
+}
+
+th{
+    color: white;
+}
+
+.nav-brand{
+
+    width: 100px;
+    margin-right: 600px;
+}
