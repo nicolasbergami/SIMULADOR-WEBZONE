@@ -15,34 +15,45 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <body>
-    <img src="https://d1fdloi71mui9q.cloudfront.net/u3kwyqW6QKuXK0HBIhA6_X9DA6W5zPjf4nL4k" alt="logo" class="nav-brand" > 
+    <a href="https://www.tutuautomotores.com"> <img src="https://d1fdloi71mui9q.cloudfront.net/u3kwyqW6QKuXK0HBIhA6_X9DA6W5zPjf4nL4k" alt="logo" class="nav-brand" > </a>
     <div class="container">
         <div class="row mt-3">
             <div class="col-6">
-                <h2>Calcular amortización método francés</h2>
+                <h3 class="container" style="color: white;;" >Seleccionar metodo de financiacion</h3>
+                <select class="justify-center container" style="width: 13rem;" id="selectOption" onchange="updateText()">
+                    <option value="option1" selected>Inclusion Financiera</option>
+                    <option value="option2">Tradicional Fija</option>
+                    <option value="option3">Uva</option>
+                  </select>
+                <h2 style="margin-top: 3rem;">Calcular financiación método</h2>
+                <h2 id="text" class="" style="color:yellow"> </h2>
+                
                 <div class="form-group">
                     <label for="monto">Monto</label>
                     <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
                 </div>
+                
                 <div class="form-group">
                     <label for="tiempo">Tiempo en Meses</label>
                     <input type="text" class="form-control" id="tiempo" placeholder="Ingresar cantidad de meses">
                 </div>
-                <div class="form-group">
-                    <label for="interes">Interés Mensual</label>
-                    <input type="text" class="form-control" id="interes" placeholder="Ingresar tasa de interés mensual">
-                </div>
+
                 <button type="submit" class="btn btn-primary" id="btnCalcular">Calcular</button>
+
+                <div id="alerta" class="alerta">
+                    <span class="close" onclick="cerrarAlerta()">&times;</span>
+                    <strong>¡ATENCION!</strong> Si selecciona la opcion "UVA" INSERTAR EL VALOR EN DOLARES.
+                  </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-offset-6">
                 <table id="lista-tabla" class="table">
                     <thead>
                         <tr>
+                            <th>N</th>
                             <th>Fecha</th>
-                            <th>Cuota</th>
-                            <th>Capital</th>
+                            <th>Cuota + iva</th>
                             <th>Interés</th>
-                            <th>Saldo</th>
+                            <th>Saldo deuda</th>
                         </tr>
                     </thead>
                     <tbody></tbody>

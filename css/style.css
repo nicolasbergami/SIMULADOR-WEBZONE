@@ -1,7 +1,6 @@
 body{
-    background: url("https://images6.alphacoders.com/774/774373.jpg") no-repeat center center fixed;
+    background: url("https://besthqwallpapers.com/Uploads/19-7-2019/99919/dark-blue-lines-4k-material-design-creative-geometric-shapes.jpg") no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.85;
 }
 
 h1{
@@ -26,3 +25,22 @@ th{
     width: 100px;
     margin-right: 600px;
 }
+
+.alerta {
+    padding: 20px;
+    background-color: #f7ef05;
+    color: rgb(0, 0, 0);
+    animation: alertaAnimada 0.9s ease-in-out;
+    margin-top: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  @keyframes alertaAnimada {
+    0% {
+      transform: translateY(-1000%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
